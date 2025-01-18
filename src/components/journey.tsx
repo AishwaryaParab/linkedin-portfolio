@@ -26,7 +26,7 @@ const Journey = () => {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 gap-8 mb-20 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 mb-20 sm:grid-cols-2 lg:grid-cols-4">
           {achievements.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -37,7 +37,7 @@ const Journey = () => {
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="p-6 transition-all bg-white shadow-lg rounded-2xl hover:shadow-xl"
+                className="h-full p-6 transition-all bg-white shadow-md sm:shadow-lg rounded-2xl hover:shadow-xl"
               >
                 <h3 className="text-4xl font-bold text-[#0077b5] mb-2">
                   {stat.number}
@@ -58,23 +58,23 @@ const Journey = () => {
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
             transition={{ duration: 1.5 }}
-            className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#0077b5] opacity-30"
+            className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#0077b5] opacity-30 hidden xs:block"
             style={{ top: 0, bottom: 0 }}
           />
 
-          <div className="relative space-y-24">
+          <div className="relative space-y-16 xs:space-y-24">
             {milestones.map((milestone, index) => (
               <motion.div
                 key={milestone.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="relative flex items-center"
+                className="relative flex flex-col items-center xs:flex-row"
               >
                 {/* Left content */}
                 <div
-                  className={`w-5/12 ${
-                    index % 2 === 0 ? "text-right pr-8" : "opacity-0"
+                  className={`hidden xs:block w-5/12 ${
+                    index % 2 === 0 ? "text-right pr-4 sm:pr-8" : "opacity-0"
                   }`}
                 >
                   <h3 className="mb-2 text-2xl font-bold text-gray-800">
@@ -84,27 +84,39 @@ const Journey = () => {
                 </div>
 
                 {/* Center icon */}
-                <div className="relative flex justify-center w-2/12">
+                <div className="relative flex justify-center w-full mb-4 xs:w-2/12 xs:mb-0">
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                    className="w-12 h-12 bg-[#0077b5] rounded-full flex items-center justify-center z-10"
+                    className="w-10 h-10 xs:w-12 xs:h-12 bg-[#0077b5] rounded-full flex items-center justify-center z-10"
                   >
-                    <milestone.icon className="w-6 h-6 text-white" />
+                    <milestone.icon className="w-5 h-5 text-white xs:w-6 xs:h-6" />
                   </motion.div>
                 </div>
 
                 {/* Right content */}
                 <div
-                  className={`w-5/12 ${
-                    index % 2 === 1 ? "text-left pl-8" : "opacity-0"
+                  className={`hidden xs:block w-full xs:w-5/12 ${
+                    index % 2 === 1 ? "text-left pl-4 sm:pl-8" : "opacity-0"
                   }`}
                 >
-                  <h3 className="mb-2 text-2xl font-bold text-gray-800">
+                  <h3 className="mb-2 text-lg font-bold text-gray-800 xs:text-2xl">
                     {milestone.title}
                   </h3>
-                  <p className="text-gray-600">{milestone.description}</p>
+                  <p className="text-sm text-gray-600 xs:text-base">
+                    {milestone.description}
+                  </p>
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col items-center w-full px-4 text-center xs:hidden sm:items-start sm:w-10/12 sm:text-left sm:px-8">
+                  <h3 className="mb-2 text-lg font-bold text-gray-800 sm:text-2xl">
+                    {milestone.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 sm:text-base">
+                    {milestone.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
