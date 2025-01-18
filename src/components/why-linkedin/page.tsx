@@ -18,9 +18,9 @@ const WhyLinkedIn = () => {
             Why LinkedIn Matters Today
           </h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-600">
-            LinkedIn has evolved from a job-seeking platform to the world's most
-            powerful stage for personal branding. It's where ideas spread,
-            careers are made, and opportunities are born.
+            LinkedIn has evolved from a job-seeking platform to the world&apos;s
+            most powerful stage for personal branding. It&apos;s where ideas
+            spread, careers are made, and opportunities are born.
           </p>
         </motion.div>
 

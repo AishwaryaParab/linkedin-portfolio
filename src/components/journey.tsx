@@ -19,7 +19,8 @@ const Journey = () => {
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
             With over 4000 followers and 5000+ organic impressions per post,
-            I've experienced firsthand the transformative power of LinkedIn.
+            I&apos;ve experienced firsthand the transformative power of
+            LinkedIn.
           </p>
           <div className="w-24 h-1 bg-[#0077b5] mx-auto mt-4"></div>
         </motion.div>
@@ -118,9 +119,10 @@ const Journey = () => {
         >
           <p className="max-w-3xl mx-auto mb-8 text-xl text-gray-600">
             Now, I want to help others experience this incredible journey.
-            Whether you're an artist, entrepreneur, or professional, your unique
-            story deserves to be heard. Let's collaborate to make your art reach
-            a wider audience and create lasting impact in your industry.
+            Whether you&apos;re an artist, entrepreneur, or professional, your
+            unique story deserves to be heard. Let&apos;s collaborate to make
+            your art reach a wider audience and create lasting impact in your
+            industry.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}

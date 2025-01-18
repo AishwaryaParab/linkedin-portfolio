@@ -15,7 +15,7 @@ const CTA = () => {
               Ready to Build Your LinkedIn Legacy?
             </h2>
             <p className="mb-8 text-xl text-white/90">
-              Join me in creating content that matters. Let's make your
+              Join me in creating content that matters. Let&apos;s make your
               expertise shine and build a community that values your insights.
             </p>
             <button className="bg-white text-[#0077b5] px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
