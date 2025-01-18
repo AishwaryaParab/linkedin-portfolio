@@ -2,12 +2,22 @@ import { Card } from "@/components/ui/card";
 import { PortfolioPost } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { LinkedinIcon, MessageSquare, Share2, ThumbsUp } from "lucide-react";
+import { useState } from "react";
 
 interface PostsProps {
   filteredPosts: PortfolioPost[];
 }
 
 const Posts = ({ filteredPosts }: PostsProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const MAX_CHAR_COUNT = 750;
+
+  const handleToggle = (id: number) => {
+    setActiveIndex(id);
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className="container px-4 mx-auto mt-12">
       <div className="grid gap-8 md:grid-cols-2">
@@ -31,8 +41,22 @@ const Posts = ({ filteredPosts }: PostsProps) => {
                 </span>
               </div>
               <p className="mb-6 text-gray-600 whitespace-pre-line">
-                {post.content}
+                {isExpanded && activeIndex === post.id
+                  ? post.content
+                  : `${post.content.slice(0, MAX_CHAR_COUNT)}${
+                      post.content.length > MAX_CHAR_COUNT ? "..." : ""
+                    }`}
               </p>
+              {post.content.length > MAX_CHAR_COUNT && (
+                <button
+                  onClick={() => handleToggle(post.id)}
+                  className="text-[#0077b5] font-medium underline"
+                >
+                  {isExpanded && activeIndex === post.id
+                    ? "...Show less"
+                    : "...Read more"}
+                </button>
+              )}
               <div className="flex items-center gap-6 text-gray-500">
                 <div className="flex items-center gap-2">
                   <ThumbsUp className="w-5 h-5" />

@@ -25,7 +25,7 @@ export const whyLinkedInCards = [
     icon: Sparkles,
     title: "Build Your Personal Brand",
     description:
-      "Whether you're an artist, entrepreneur, or professional, LinkedIn is where thought leaders are born. Your expertise deserves to be shared with the world.",
+      "Whether you're an artist, entrepreneur or professional, LinkedIn is where thought leaders are born. Your expertise deserves to be shared with the world.",
   },
   {
     icon: Users,
@@ -49,7 +49,7 @@ export const milestones = [
   },
   {
     title: "Industry Recognition",
-    description: "Respected voice in software engineering",
+    description: "Respected voice in Software Engineering",
     icon: Award,
   },
   {
@@ -136,87 +136,8 @@ export interface Engagement {
 export interface PortfolioPost {
   id: number;
   client: string;
+  clientType: string;
   industry: string;
   content: string;
   engagement: Engagement;
 }
-
-export const portfolioPosts = [
-  {
-    id: 1,
-    client: "Tech Startup CEO",
-    industry: "Technology",
-    content: `🚀 Breaking News: We've just closed our Series A funding round at $10M! 
-  
-  Grateful for the trust our investors have placed in our vision to revolutionize the future of work.
-  
-  Key learnings from our journey:
-  1. Build for your users, not investors
-  2. Culture eats strategy for breakfast
-  3. Resilience is your best friend
-  
-  What's next? We're hiring! DM me if you want to be part of something special.
-  
-  #StartupLife #TechInnovation #Leadership`,
-    engagement: { likes: 1542, comments: 89, shares: 234 },
-  },
-  {
-    id: 2,
-    client: "Marketing Director",
-    industry: "Marketing",
-    content: `💡 The ONE marketing strategy that transformed our ROI by 300%:
-  
-  Content that converts.
-  
-  Here's the framework we used:
-  • Identify pain points
-  • Create valuable solutions
-  • Engage authentically
-  • Measure & iterate
-  
-  Simple but effective.
-  
-  Want to learn more? Drop a "YES" in the comments!
-  
-  #MarketingTips #DigitalMarketing #Growth`,
-    engagement: { likes: 2103, comments: 156, shares: 412 },
-  },
-  {
-    id: 3,
-    client: "Product Designer",
-    industry: "Design",
-    content: `🎨 Design isn't just about making things pretty.
-  
-  After 10 years in the industry, here's what I've learned:
-  
-  1. Design solves problems
-  2. Users don't read, they scan
-  3. Simplicity > Complexity
-  4. Data drives decisions
-  5. Empathy is everything
-  
-  Thread 🧵 on how to apply these principles...
-  
-  #DesignThinking #UX #ProductDesign`,
-    engagement: { likes: 3240, comments: 178, shares: 523 },
-  },
-  {
-    id: 4,
-    client: "Sales Executive",
-    industry: "Sales",
-    content: `🎯 Hit 200% of my sales quota this quarter.
-  
-  The secret?
-  Stop selling. Start solving.
-  
-  3 mindset shifts that changed everything:
-  1. Focus on pain points, not features
-  2. Listen more than you talk
-  3. Follow up with value, not pressure
-  
-  Who wants my sales playbook? 👇
-  
-  #SalesSuccess #B2B #BusinessGrowth`,
-    engagement: { likes: 1876, comments: 245, shares: 167 },
-  },
-];

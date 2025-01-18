@@ -131,7 +131,7 @@ const Journey = () => {
         >
           <p className="max-w-3xl mx-auto mb-8 text-xl text-gray-600">
             Now, I want to help others experience this incredible journey.
-            Whether you&apos;re an artist, entrepreneur, or professional, your
+            Whether you&apos;re an artist, entrepreneur or professional, your
             unique story deserves to be heard. Let&apos;s collaborate to make
             your art reach a wider audience and create lasting impact in your
             industry.

@@ -16,7 +16,13 @@ const Header = ({
   selectedIndustry,
   setSelectedIndustry,
 }: HeaderProps) => {
-  const industries = ["All", "Technology", "Marketing", "Design", "Sales"];
+  const industries = [
+    "All",
+    "Technology",
+    "Marketing",
+    "Event",
+    "Personal Story",
+  ];
   return (
     <div className="bg-white shadow-sm">
       <div className="container px-4 py-8 mx-auto">

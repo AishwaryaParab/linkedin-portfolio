@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
 import Header from "./components/header";
-import { portfolioPosts } from "@/lib/utils";
 import Posts from "./components/posts";
+import { posts } from "@/lib/portfolioPosts";
 
 const Portfolio = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedIndustry, setSelectedIndustry] = useState("All");
 
-  const filteredPosts = portfolioPosts.filter((post) => {
+  const filteredPosts = posts.filter((post) => {
     const matchesSearch =
       post.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.client.toLowerCase().includes(searchTerm.toLowerCase());

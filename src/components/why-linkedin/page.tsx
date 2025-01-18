@@ -20,7 +20,7 @@ const WhyLinkedIn = () => {
           <p className="max-w-3xl mx-auto text-xl text-gray-600">
             LinkedIn has evolved from a job-seeking platform to the world&apos;s
             most powerful stage for personal branding. It&apos;s where ideas
-            spread, careers are made, and opportunities are born.
+            spread, careers are made and opportunities are born.
           </p>
         </motion.div>
 
